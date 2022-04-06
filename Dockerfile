@@ -13,7 +13,7 @@ LABEL "com.github.actions.color"="green"
 RUN dnf update --assumeyes \
   && dnf install -y epel-release \
   && dnf install --assumeyes \
-    ansible git \
+    ansible-core git \
   && dnf clean all \
   && ansible --version
 
