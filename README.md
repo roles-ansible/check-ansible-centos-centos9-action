@@ -1,18 +1,18 @@
-[![Github Marketplace](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos8-action/master/.github/marketplace.svg?sanitize=true)](https://github.com/marketplace/actions/check-ansible-centos-centos8)
-[![MIT License](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos8-action/master/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/check-ansible-centos-centos8-action/blob/master/LICENSE)
+[![Github Marketplace](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/master/.github/marketplace.svg?sanitize=true)](https://github.com/marketplace/actions/check-ansible-centos-centos9)
+[![MIT License](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/master/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/check-ansible-centos-centos9-action/blob/master/LICENSE)
 
- Check Ansible CentOS centos8
+ Check Ansible CentOS centos9
 =======================
-This action allows you to test your ansible role or your playbook in a Docker Container with ``centos:centos8``.
+This action allows you to test your ansible role or your playbook in a Docker Container with ``quay.io/centos/centos:stream9``.
 
 ## Usage
-To use the action simply create an ``ansible-centos-centos8.yml`` *(or choose custom ``*.yml`` name)* in the ``.github/workflows/`` directory.
+To use the action simply create an ``ansible-centos-centos9.yml`` *(or choose custom ``*.yml`` name)* in the ``.github/workflows/`` directory.
 
 For example:
 
 ```yaml
 ---
-name: Ansible check centos:stream8  # feel free to pick your own name
+name: Ansible check centos:stream9  # feel free to pick your own name
 
 # yamllint disable-line rule:truthy
 on: [push, pull_request]
@@ -26,9 +26,9 @@ jobs:
       - name: checkout git repo
         uses: actions/checkout@v3
 
-      - name: ansible check with quay.io/centos/centos:stream8
+      - name: ansible check with quay.io/centos/centos:stream9
         # optionally replace "master" with any valid git ref
-        uses: roles-ansible/check-ansible-centos-centos8-action@master
+        uses: roles-ansible/check-ansible-centos-centos9-action@master
         with:
           targets: "./"
           #  [required]
