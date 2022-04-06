@@ -1,5 +1,5 @@
-[![Github Marketplace](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/master/.github/marketplace.svg?sanitize=true)](https://github.com/marketplace/actions/check-ansible-centos-centos9)
-[![MIT License](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/master/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/check-ansible-centos-centos9-action/blob/master/LICENSE)
+[![Github Marketplace](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/main/.github/marketplace.svg?sanitize=true)](https://github.com/marketplace/actions/check-ansible-centos-centos9)
+[![MIT License](https://raw.githubusercontent.com/roles-ansible/check-ansible-centos-centos9-action/main/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/check-ansible-centos-centos9-action/blob/main/LICENSE)
 
  Check Ansible CentOS centos9
 =======================
@@ -27,8 +27,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: ansible check with quay.io/centos/centos:stream9
-        # optionally replace "master" with any valid git ref
-        uses: roles-ansible/check-ansible-centos-centos9-action@master
+        # optionally replace "main" with any valid git ref
+        uses: roles-ansible/check-ansible-centos-centos9-action@main
         with:
           targets: "./"
           #  [required]
